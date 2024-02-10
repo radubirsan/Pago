@@ -48,6 +48,29 @@ struct ContactsListView: View {
             .navigationBarTitleDisplayMode(.large)
             .toolbarBackground(Color.white, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
+            .toolbar {
+                ToolbarItem(placement: .topBarTrailing) {
+                    Button {
+                        print("Edit button was tapped")
+                        model.addContact(text: "Contact", id:Int.random(in: 1...10000))
+                    } label: {
+                        Image(systemName: "person.fill.badge.plus")
+                            .resizable()
+                            .aspectRatio(contentMode: .fill)
+                            .frame(width: 24, height: 24)
+                            .foregroundColor(Color(headerTextColor))
+                            .padding(7)
+                            .background(Color.white)
+                            .cornerRadius(8)
+                            .overlay(
+                                RoundedRectangle(cornerRadius: 8)
+                                    .stroke(Color(headerTextColor), lineWidth: 2)
+                            )
+                    }
+                    
+                }
+                
+            }
             .background(Color.white)
         }
        
