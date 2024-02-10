@@ -1,10 +1,3 @@
-//
-//  File.swift
-//  Pago
-//
-//  Created by radu on 10.02.2024.
-//
-
 import Foundation
 import CoreData
 
@@ -36,14 +29,17 @@ import SwiftUI
                 print ("ERROR LOADING CODE DATA \(error)")
             }
             else {
-                
-                print("🟩")
+                self.fetchContact()
+                print("🟩", self.savedEntities.count)
+                //This is just a way to clear the CoreData for tests
+                //self.deleteAll()
+                //self.saveData()
             }
         }
     }
 
     func getContacts() {
-        //only grab the JSON if there are 0 contacts stored in core data
+        //only grab the JSON if there are 0 contacts stored in coredata
         if(savedEntities.count == 0) {
             Task {
                 do {
@@ -58,8 +54,7 @@ import SwiftUI
             print("🟪",savedEntities.count)
         }
     }
-    
-    
+
     func saveContactsToCoreData(_ contacts: [Contact]) {
            
             for contact in contacts {
@@ -75,14 +70,10 @@ import SwiftUI
             }
         }
     
-    func saveData(){
-        do {
-            try  container.viewContext.save()
-            fetchContact()
-        }
-        catch let error {
-            print ("Error saving \(error)" )
-        }
+    func deleteAll() {
+          let fetchRequest1: NSFetchRequest<NSFetchRequestResult> = ContactEntity.fetchRequest()
+          let batchDeleteRequest1 = NSBatchDeleteRequest(fetchRequest: fetchRequest1)
+          _ = try? container.viewContext.execute(batchDeleteRequest1)
     }
     
     func fetchContact(){
@@ -94,8 +85,39 @@ import SwiftUI
             print ("Error fetching \(error)")
         }
     }
-
     
+    func addContact(text:String, id:Int, prenume:String = "", _ email:String = "") {
+        let newContact = ContactEntity(context: container.viewContext)
+        newContact.name = text + " \(id)"
+        newContact.id = Int32(id)
+        newContact.email  = email
+        print("ADD \(text) " + "\(id)")
+        saveData()
+    }
+    
+    func updateContact(entity:ContactEntity){
+        let currentName = entity.name ?? ""
+        let newName = currentName + "!"
+        entity.name = newName
+        saveData()
+    }
+    
+    func deleteContact(indexSet:IndexSet){
+        guard let index = indexSet.first else {return}
+        let entity = savedEntities[index]
+        container.viewContext.delete(entity)
+        saveData()
+    }
+    
+    func saveData(){
+        do {
+            try  container.viewContext.save()
+            fetchContact()
+        }
+        catch let error {
+            print ("Error saving \(error)" )
+        }
+    }
 }
 
 

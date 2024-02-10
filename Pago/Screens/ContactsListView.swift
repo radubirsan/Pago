@@ -27,12 +27,13 @@ struct ContactsListView: View {
                 }
                 List {
                     
-                    ForEach(Array(model.contacts.indices), id: \.self) { index in
-                        let contact = model.contacts[index]
+                    ForEach(Array(model.savedEntities.indices), id: \.self) { index in
+                        let entity = model.savedEntities[index]
                         HStack {
-                            ContactRemoteImage(name:contact.name ,idx:Int(contact.id)  )
-                            
-                            Text(contact.name)
+                            if let unwraped = entity.name {
+                                ContactRemoteImage(name:unwraped ,idx:Int(entity.id)  )
+                            }
+                            Text(entity.name ?? "No Name")
                                 .font(.title)
                         }
                         .frame(height: 64)
