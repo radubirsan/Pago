@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		17EE803F2B779B5500A5D399 /* PagoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE803E2B779B5500A5D399 /* PagoApp.swift */; };
-		17EE80412B779B5500A5D399 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80402B779B5500A5D399 /* ContentView.swift */; };
 		17EE80432B779B5700A5D399 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EE80422B779B5700A5D399 /* Assets.xcassets */; };
 		17EE80462B779B5700A5D399 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 17EE80452B779B5700A5D399 /* Preview Assets.xcassets */; };
 		17EE804E2B779BB000A5D399 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE804D2B779BB000A5D399 /* ContactsListView.swift */; };
@@ -21,7 +20,6 @@
 /* Begin PBXFileReference section */
 		17EE803B2B779B5500A5D399 /* Pago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pago.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EE803E2B779B5500A5D399 /* PagoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoApp.swift; sourceTree = "<group>"; };
-		17EE80402B779B5500A5D399 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		17EE80422B779B5700A5D399 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		17EE80452B779B5700A5D399 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		17EE804D2B779BB000A5D399 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
@@ -65,7 +63,6 @@
 				17EE80532B779F5800A5D399 /* Utils */,
 				17EE803E2B779B5500A5D399 /* PagoApp.swift */,
 				17EE804C2B779B9500A5D399 /* Screens */,
-				17EE80402B779B5500A5D399 /* ContentView.swift */,
 				17EE80422B779B5700A5D399 /* Assets.xcassets */,
 				17EE80442B779B5700A5D399 /* Preview Content */,
 			);
@@ -180,7 +177,6 @@
 				17EE80502B779CCC00A5D399 /* ScreenTabView.swift in Sources */,
 				17EE80552B779F6C00A5D399 /* NetworkCallManager.swift in Sources */,
 				17EE80582B779FCB00A5D399 /* ContactRemoteImage.swift in Sources */,
-				17EE80412B779B5500A5D399 /* ContentView.swift in Sources */,
 				17EE804E2B779BB000A5D399 /* ContactsListView.swift in Sources */,
 				17EE803F2B779B5500A5D399 /* PagoApp.swift in Sources */,
 			);
