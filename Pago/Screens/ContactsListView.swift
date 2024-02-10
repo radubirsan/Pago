@@ -15,8 +15,8 @@ struct ContactsListView: View {
                 Section() {
                     HStack() {
                         Text("CONTACTELE MELE")
-                      .bold()
-                      Spacer()
+                            .bold()
+                        Spacer()
                     }
                     .padding()
                     .foregroundColor(Color(headerTextColor))
@@ -31,7 +31,7 @@ struct ContactsListView: View {
                             Text ("Nume Prenume")
                         }
                     }
-                   
+                    
                 }
                 .listStyle(PlainListStyle())
             }
