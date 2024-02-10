@@ -14,6 +14,8 @@
 		17EE804E2B779BB000A5D399 /* ContactsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE804D2B779BB000A5D399 /* ContactsListView.swift */; };
 		17EE80502B779CCC00A5D399 /* ScreenTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE804F2B779CCC00A5D399 /* ScreenTabView.swift */; };
 		17EE80522B779D1700A5D399 /* EditContactScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80512B779D1700A5D399 /* EditContactScreen.swift */; };
+		17EE80552B779F6C00A5D399 /* NetworkCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80542B779F6C00A5D399 /* NetworkCallManager.swift */; };
+		17EE80582B779FCB00A5D399 /* ContactRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +27,8 @@
 		17EE804D2B779BB000A5D399 /* ContactsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsListView.swift; sourceTree = "<group>"; };
 		17EE804F2B779CCC00A5D399 /* ScreenTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenTabView.swift; sourceTree = "<group>"; };
 		17EE80512B779D1700A5D399 /* EditContactScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditContactScreen.swift; sourceTree = "<group>"; };
+		17EE80542B779F6C00A5D399 /* NetworkCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallManager.swift; sourceTree = "<group>"; };
+		17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemoteImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +61,8 @@
 		17EE803D2B779B5500A5D399 /* Pago */ = {
 			isa = PBXGroup;
 			children = (
+				17EE80562B779FB400A5D399 /* Views */,
+				17EE80532B779F5800A5D399 /* Utils */,
 				17EE803E2B779B5500A5D399 /* PagoApp.swift */,
 				17EE804C2B779B9500A5D399 /* Screens */,
 				17EE80402B779B5500A5D399 /* ContentView.swift */,
@@ -82,6 +88,22 @@
 				17EE80512B779D1700A5D399 /* EditContactScreen.swift */,
 			);
 			path = Screens;
+			sourceTree = "<group>";
+		};
+		17EE80532B779F5800A5D399 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				17EE80542B779F6C00A5D399 /* NetworkCallManager.swift */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		17EE80562B779FB400A5D399 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -156,6 +178,8 @@
 			files = (
 				17EE80522B779D1700A5D399 /* EditContactScreen.swift in Sources */,
 				17EE80502B779CCC00A5D399 /* ScreenTabView.swift in Sources */,
+				17EE80552B779F6C00A5D399 /* NetworkCallManager.swift in Sources */,
+				17EE80582B779FCB00A5D399 /* ContactRemoteImage.swift in Sources */,
 				17EE80412B779B5500A5D399 /* ContentView.swift in Sources */,
 				17EE804E2B779BB000A5D399 /* ContactsListView.swift in Sources */,
 				17EE803F2B779B5500A5D399 /* PagoApp.swift in Sources */,

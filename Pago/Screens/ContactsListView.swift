@@ -24,13 +24,11 @@ struct ContactsListView: View {
                     
                 }
                 List {
+                    
                     ForEach(0..<11) { index in
                         HStack {
-                            Image(systemName: "person")
-                                .resizable()
-                                .aspectRatio(contentMode: .fit)
-                                .frame(width: 50, height: 50)
-                            Text ( "Nume Prenume")
+                            ContactRemoteImage(name:"Nume Prenume", idx:index)
+                            Text ("Nume Prenume")
                         }
                     }
                    
