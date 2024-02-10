@@ -17,7 +17,18 @@
 		17EE80582B779FCB00A5D399 /* ContactRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */; };
 		17EE805B2B77A9CC00A5D399 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE805A2B77A9CC00A5D399 /* Model.swift */; };
 		17EE805E2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17EE805C2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld */; };
+		17EE80662B77B4A400A5D399 /* PagoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80652B77B4A400A5D399 /* PagoTests.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		17EE80672B77B4A400A5D399 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 17EE80332B779B5500A5D399 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 17EE803A2B779B5500A5D399;
+			remoteInfo = Pago;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		17EE803B2B779B5500A5D399 /* Pago.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pago.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -31,10 +42,19 @@
 		17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemoteImage.swift; sourceTree = "<group>"; };
 		17EE805A2B77A9CC00A5D399 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		17EE805D2B77AD6900A5D399 /* ContactsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsContainer.xcdatamodel; sourceTree = "<group>"; };
+		17EE80632B77B4A400A5D399 /* PagoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PagoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		17EE80652B77B4A400A5D399 /* PagoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		17EE80382B779B5500A5D399 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EE80602B77B4A400A5D399 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -48,6 +68,7 @@
 			isa = PBXGroup;
 			children = (
 				17EE803D2B779B5500A5D399 /* Pago */,
+				17EE80642B77B4A400A5D399 /* PagoTests */,
 				17EE803C2B779B5500A5D399 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -56,6 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				17EE803B2B779B5500A5D399 /* Pago.app */,
+				17EE80632B77B4A400A5D399 /* PagoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +139,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		17EE80642B77B4A400A5D399 /* PagoTests */ = {
+			isa = PBXGroup;
+			children = (
+				17EE80652B77B4A400A5D399 /* PagoTests.swift */,
+			);
+			path = PagoTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,6 +167,24 @@
 			productReference = 17EE803B2B779B5500A5D399 /* Pago.app */;
 			productType = "com.apple.product-type.application";
 		};
+		17EE80622B77B4A400A5D399 /* PagoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 17EE80692B77B4A400A5D399 /* Build configuration list for PBXNativeTarget "PagoTests" */;
+			buildPhases = (
+				17EE805F2B77B4A400A5D399 /* Sources */,
+				17EE80602B77B4A400A5D399 /* Frameworks */,
+				17EE80612B77B4A400A5D399 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				17EE80682B77B4A400A5D399 /* PBXTargetDependency */,
+			);
+			name = PagoTests;
+			productName = PagoTests;
+			productReference = 17EE80632B77B4A400A5D399 /* PagoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -149,6 +197,10 @@
 				TargetAttributes = {
 					17EE803A2B779B5500A5D399 = {
 						CreatedOnToolsVersion = 15.0;
+					};
+					17EE80622B77B4A400A5D399 = {
+						CreatedOnToolsVersion = 15.0;
+						TestTargetID = 17EE803A2B779B5500A5D399;
 					};
 				};
 			};
@@ -166,6 +218,7 @@
 			projectRoot = "";
 			targets = (
 				17EE803A2B779B5500A5D399 /* Pago */,
+				17EE80622B77B4A400A5D399 /* PagoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -177,6 +230,13 @@
 			files = (
 				17EE80462B779B5700A5D399 /* Preview Assets.xcassets in Resources */,
 				17EE80432B779B5700A5D399 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		17EE80612B77B4A400A5D399 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -198,7 +258,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		17EE805F2B77B4A400A5D399 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				17EE80662B77B4A400A5D399 /* PagoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		17EE80682B77B4A400A5D399 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 17EE803A2B779B5500A5D399 /* Pago */;
+			targetProxy = 17EE80672B77B4A400A5D399 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		17EE80472B779B5700A5D399 /* Debug */ = {
@@ -388,6 +464,50 @@
 			};
 			name = Release;
 		};
+		17EE806A2B77B4A400A5D399 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GLZUW75SU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = as3.PagoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pago.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pago";
+			};
+			name = Debug;
+		};
+		17EE806B2B77B4A400A5D399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 4GLZUW75SU;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = as3.PagoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Pago.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Pago";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -405,6 +525,15 @@
 			buildConfigurations = (
 				17EE804A2B779B5700A5D399 /* Debug */,
 				17EE804B2B779B5700A5D399 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		17EE80692B77B4A400A5D399 /* Build configuration list for PBXNativeTarget "PagoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17EE806A2B77B4A400A5D399 /* Debug */,
+				17EE806B2B77B4A400A5D399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
