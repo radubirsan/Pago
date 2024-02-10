@@ -16,6 +16,7 @@
 		17EE80552B779F6C00A5D399 /* NetworkCallManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80542B779F6C00A5D399 /* NetworkCallManager.swift */; };
 		17EE80582B779FCB00A5D399 /* ContactRemoteImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */; };
 		17EE805B2B77A9CC00A5D399 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EE805A2B77A9CC00A5D399 /* Model.swift */; };
+		17EE805E2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 17EE805C2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -29,6 +30,7 @@
 		17EE80542B779F6C00A5D399 /* NetworkCallManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkCallManager.swift; sourceTree = "<group>"; };
 		17EE80572B779FCB00A5D399 /* ContactRemoteImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactRemoteImage.swift; sourceTree = "<group>"; };
 		17EE805A2B77A9CC00A5D399 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		17EE805D2B77AD6900A5D399 /* ContactsContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ContactsContainer.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +70,7 @@
 				17EE804C2B779B9500A5D399 /* Screens */,
 				17EE80422B779B5700A5D399 /* Assets.xcassets */,
 				17EE80442B779B5700A5D399 /* Preview Content */,
+				17EE805C2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld */,
 			);
 			path = Pago;
 			sourceTree = "<group>";
@@ -184,6 +187,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				17EE805E2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld in Sources */,
 				17EE80522B779D1700A5D399 /* EditContactScreen.swift in Sources */,
 				17EE80502B779CCC00A5D399 /* ScreenTabView.swift in Sources */,
 				17EE805B2B77A9CC00A5D399 /* Model.swift in Sources */,
@@ -406,6 +410,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		17EE805C2B77AD6900A5D399 /* ContactsContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				17EE805D2B77AD6900A5D399 /* ContactsContainer.xcdatamodel */,
+			);
+			currentVersion = 17EE805D2B77AD6900A5D399 /* ContactsContainer.xcdatamodel */;
+			path = ContactsContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 17EE80332B779B5500A5D399 /* Project object */;
 }
