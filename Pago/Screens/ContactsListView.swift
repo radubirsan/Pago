@@ -16,9 +16,9 @@ struct ContactsListView: View {
             VStack(spacing:0){
                 Section() {
                     HStack() {
-                        Text("CONTACTELE MELE")
-                            .bold()
-                        Spacer()
+                        Text("CONTACTELE MELE (\(model.savedEntities.count))")
+                      .bold()
+                      Spacer()
                     }
                     .padding()
                     .foregroundColor(Color(headerTextColor))
@@ -26,7 +26,6 @@ struct ContactsListView: View {
                     
                 }
                 List {
-                    
                     ForEach(Array(model.savedEntities.indices), id: \.self) { index in
                         let entity = model.savedEntities[index]
                         HStack {
@@ -38,10 +37,14 @@ struct ContactsListView: View {
                         }
                         .frame(height: 64)
                     }
+                    .onDelete(perform: { indexSet in
+                        model.deleteContact(indexSet: indexSet)
+                    })
+                    
                 }
                 .listStyle(PlainListStyle())
             }
-            .task {
+            .task{
                 model.getContacts()
             }
             .navigationTitle("Contacte")

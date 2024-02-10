@@ -31,8 +31,9 @@ struct ContactRemoteImage: View {
                     .frame(width:56, height: 56)
                     .foregroundColor(Color(circleColor))
                 imageLoader.image?.resizable()
+                
             }
-            .clipShape(/*@START_MENU_TOKEN@*/Circle()/*@END_MENU_TOKEN@*/)
+            .clipShape(Circle())
             .frame(width:56, height: 56)
             .onAppear { imageLoader.load(fromURLString:"https://picsum.photos/200/200?id=\(idx)") }
         }

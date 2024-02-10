@@ -9,6 +9,7 @@ import SwiftUI
 
 struct EditContactScreen: View {
     
+    @EnvironmentObject var model: Model
     @State private var numeContact: String = ""
     @State private var prenumeContact: String = ""
     @State private var emailContact: String = ""
@@ -35,7 +36,25 @@ struct EditContactScreen: View {
                     Section(header: Text("EMAIL")) {
                         FormItem(title: "EMAIL", text: $emailContact)
                     }
-              
+                    
+                    Section {
+                        } footer: {
+                            VStack {
+                                Spacer()
+                                Button(action: {
+                                    model.addContact(text: numeContact + " " + prenumeContact, id: Int.random(in: 1...10000))
+                                }) {
+                                    Text("Salvează")
+                                        .frame(maxWidth: .infinity)
+                                        .frame(height: 50)
+                                        .background(Color.green)
+                                        .cornerRadius(17)
+                                        .foregroundColor(.white)
+                                        .shadow(color: .gray, radius: 2, x: 0, y: 2)
+                                }
+                                .contentShape(Rectangle())
+                            }
+                        }
                 }
             .toolbarBackground(Color.white, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
@@ -54,7 +73,7 @@ struct FormItem: View {
             TextField("", text: $text)
                 .overlay(Rectangle().frame(height: 1).foregroundColor(.gray), alignment: .bottom)
                 .font(.title2)
-                .padding(.bottom, -12) 
+                .padding(.bottom, -12)
         }
         .frame(maxWidth: .infinity, minHeight: 40)
         .padding(.horizontal, 2)

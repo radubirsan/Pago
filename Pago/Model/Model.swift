@@ -88,10 +88,9 @@ import SwiftUI
     
     func addContact(text:String, id:Int, prenume:String = "", _ email:String = "") {
         let newContact = ContactEntity(context: container.viewContext)
-        newContact.name = text + " \(id)"
+        newContact.name = text //+ " \(id)"
         newContact.id = Int32(id)
         newContact.email  = email
-        print("ADD \(text) " + "\(id)")
         saveData()
     }
     
