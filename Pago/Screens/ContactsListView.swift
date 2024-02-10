@@ -7,6 +7,8 @@
 import SwiftUI
 
 struct ContactsListView: View {
+    @EnvironmentObject var model: Model
+    
     let headerTextColor = #colorLiteral(red: 0.5960641503, green: 0.6470625997, blue: 0.7450918555, alpha: 1)
     let headerBackgroundColor = #colorLiteral(red: 0.9372519851, green: 0.9490204453, blue: 0.9686259627, alpha: 1)
     var body: some View {
@@ -25,15 +27,21 @@ struct ContactsListView: View {
                 }
                 List {
                     
-                    ForEach(0..<11) { index in
+                    ForEach(Array(model.contacts.indices), id: \.self) { index in
+                        let contact = model.contacts[index]
                         HStack {
-                            ContactRemoteImage(name:"Nume Prenume", idx:index)
-                            Text ("Nume Prenume")
+                            ContactRemoteImage(name:contact.name ,idx:Int(contact.id)  )
+                            
+                            Text(contact.name)
+                                .font(.title)
                         }
+                        .frame(height: 64)
                     }
-                    
                 }
                 .listStyle(PlainListStyle())
+            }
+            .task {
+                model.getContacts()
             }
             .navigationTitle("Contacte")
             .navigationBarTitleDisplayMode(.large)
@@ -46,7 +54,7 @@ struct ContactsListView: View {
 }
 
 #Preview {
-    ContactsListView()
+    ContactsListView().environmentObject(Model.shared)
 }
 
 

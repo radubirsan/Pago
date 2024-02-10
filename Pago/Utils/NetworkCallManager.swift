@@ -14,6 +14,24 @@ final class NetworkCallManager {
     private let contactsURL = "https://gorest.co.in/public/v2/users"
     private init() {}
     
+    func getContactsFromURL() async throws -> [Contact] {
+        guard let url = URL(string: contactsURL) else {
+            fatalError("Failed to create URL from: \(contactsURL)")
+        }
+        
+        let (data, _) = try await URLSession.shared.data(from: url)
+        
+        do {
+            let decoder = JSONDecoder()
+            
+            let contacts:[Contact] = try decoder.decode([Contact].self, from: data)
+            return contacts
+        } catch {
+            //throw error
+           fatalError("Failed to parse the JSON")
+        }
+    }
+    
     func downloadImage(fromURLString urlString: String, completed: @escaping (UIImage?) -> Void ) {
         
         let cacheKey = NSString(string: urlString)

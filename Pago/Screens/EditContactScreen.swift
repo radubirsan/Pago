@@ -62,5 +62,5 @@ struct FormItem: View {
 }
 
 #Preview {
-    EditContactScreen()
+    EditContactScreen().environmentObject(Model.shared)
 }
